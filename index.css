@@ -4,15 +4,14 @@ html {
 body{
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
-    background-color: rgb(27, 35, 39);
+    background-color: rgb(28, 30, 34);
     position: relative;
     color: rgb(245, 245, 245);
 }
 a, a:hover, a:visited, a:active, a:focus{
-    color: inherit;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -36,7 +35,6 @@ header:after{
     content: '';
     width: 100%;
     height: 3px;
-    background-image: linear-gradient(-45deg, rgb(244,205,205), rgb(220, 211, 241), rgb(195,207,216),rgb(234,231,198), rgb(207,230,175), rgb(197,197,175));
     background-image: linear-gradient(to right, rgb(247, 191, 191), rgb(208, 195, 240), rgb(174, 202, 223),rgb(236, 232, 182), rgb(201, 236, 152), rgb(167, 167, 146));
     position: absolute;
     bottom: 0;
@@ -78,19 +76,9 @@ header:after{
     color: rgb(195,207,216);
 }
 .section-banner{
-    /* background: linear-gradient(-45deg, rgb(194, 93, 62), rgb(172, 44, 93), rgb(30, 94, 117), rgb(35, 213, 171), rgb(167, 241, 46)); */
     height: 640px;
-    /* background-image: linear-gradient(-45deg, #c3b1ee, #fde8f7, #c3cfe2, #f5f7fa, #bfffec, #deffcd);
-	background-size: 400% 400%;
-	animation: gradient 15s ease-in-out infinite; */
-    background-color: rgba(28, 30, 34,0.99);
-
-    /* background-image: linear-gradient(-45deg, #f798dc,#aa8eee,rgb(145, 193, 211), rgb(35, 213, 171), rgb(167, 241, 46));
-    background-image: linear-gradient(-45deg, rgb(244,205,205), rgb(220, 211, 241), rgb(195,207,216),rgb(234,231,198), rgb(207,230,175), rgb(197,197,175));
-    background-image: linear-gradient(to right, rgb(247, 191, 191), rgb(208, 195, 240), rgb(174, 202, 223),rgb(236, 232, 182), rgb(201, 236, 152), rgb(167, 167, 146));
-	background-size: 500% 500%;
-	animation: gradient 10s ease-in-out infinite; */
     background-color: rgb(28, 30, 34);
+    background-image: linear-gradient(to bottom, rgb(46, 58, 65), rgb(28, 30, 34)) ;
 }
 @keyframes gradient {
 	0% {
@@ -107,7 +95,6 @@ header:after{
     font-family: 'Ubuntu Condensed', sans-serif;
     line-height: 500px;
     text-align: center;
-    
     color: rgba(0,0,0,0.8);
     font-weight: 700;
     font-size: 2.5rem;
@@ -118,7 +105,14 @@ header:after{
     background-size: 500% 500%;
 	animation: gradient 10s ease-in-out infinite;
     text-transform: uppercase;
-    
+    letter-spacing: 2px;
+}
+.section-banner__title__word{
+    margin: 0;
+    display: inline-block;
+}
+.section-banner__title__word::first-letter{
+    font-size: 4rem;
 }
 .title-box{
     position: relative;
@@ -164,12 +158,13 @@ header:after{
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    margin: 2.5rem 0rem;
 }
 .skill-container{
     width: 80px;
     padding: 0;
     text-align: center;
-    margin: 1rem 0.5rem;
+    margin: 1.5rem 1rem;
     transition: all 200ms;
 }
 .skill-container:hover{
@@ -260,6 +255,13 @@ header:after{
     box-shadow: 0px 0px 10px rgba(255,255,255,0.4);
     border: 3px solid white;
     background-color: rgb(243, 243, 242);
+    transition: all 100ms;
+}
+.card:hover{
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.64);
+}
+.card:hover .card-body{
+    background-color: rgb(255, 255, 255);
 }
 .card-body{
     background-color: rgb(243, 243, 242);
@@ -294,7 +296,7 @@ header:after{
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin: 3rem 0;
+    margin: 3rem 0 5rem 0;
 }
 .contact__box{
     position: relative;
@@ -361,13 +363,14 @@ footer{
         width: 60%;
         font-size: 1rem;
     }
-    .section-banner{
-        height: 200px;
-    }
     .section-banner__title{
         font-size: 50px;
         padding: 0;
-        line-height: 200px;
+        line-height: 600px;
+    }
+    .skill-boxes{
+        width: 50%;
+        margin: 2.5rem auto;
     }
     .skill-container{
         width: 90px;
@@ -383,7 +386,6 @@ footer{
     .card-text{
         height: 80px;
     }
-
 }
 @media screen and (min-width: 1200px){
     .navbar-nav{
@@ -409,5 +411,4 @@ footer{
         margin-left: auto;
         margin-right: auto;
     }
-
 }
