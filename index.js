@@ -1,3 +1,25 @@
+let nombre = "Victoria ";
+let apellido = "Nastasi";
+let acuNombre = ``;
+let acuApellido = ``;
+let i = 0;
+let j = 0;
+function typing (text, id, acuText, x){
+    if(x < text.length){
+        acuText += text.charAt(x);
+        console.log(acuText)
+        document.getElementById(`${id}`).innerHTML = acuText;
+        setTimeout(() => {
+            typing(text, id, acuText, x)
+        }, 100);
+        x++;
+    }
+}
+typing(nombre, 'nombre', acuNombre, i)
+setTimeout(() => {
+    typing(apellido, 'apellido', acuApellido, j)
+}, 1100);
+
 let projects = [
     {nombre: "Ayelen Industria Publicitaria S.A.", carouselId: "carouselAyn", img1: "./img/ayn1.jpg", img2: "./img/ayn2.jpg", img3: "./img/ayn3.jpg", descripcion: "Sitio Web de carteles publicitarios, responsive, utilizando SASS, Bootstrap y animaciones (Animate.css y Animate On Scroll Library).", github:"https://github.com/victorianastasi/proyectoAYN", online:"https://victorianastasi.github.io/proyectoAYN/", links: 2},
     {nombre: "Chinagurumis", carouselId: "carouselChinagurumis", img1: "./img/amigurumis1.jpg", img2: "./img/amigurumis2.jpg", img3: "./img/amigurumis3.png", descripcion: "E-commerce de muñecos tejidos con formulario de contacto (nodemailer) y plataforma de pago (Checkout Pro de MercadoPago).", github:"https://github.com/victorianastasi/amigurumis", online:"https://victorianastasi.github.io/amigurumis/", links: 2},

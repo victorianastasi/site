@@ -103,7 +103,6 @@ header:after{
     font-family: 'Ubuntu Condensed', sans-serif;
     line-height: 500px;
     text-align: center;
-    color: rgba(0,0,0,0.8);
     font-weight: 700;
     font-size: 2.5rem;
     background-image: linear-gradient(to right, rgb(247, 191, 191), rgb(208, 195, 240), rgb(174, 202, 223),rgb(236, 232, 182), rgb(201, 236, 152), rgb(167, 167, 146));
@@ -113,7 +112,9 @@ header:after{
     background-size: 500% 500%;
 	animation: gradient 10s ease-in-out infinite;
     text-transform: uppercase;
+    
     letter-spacing: 2px;
+    
 }
 .section-banner__title__word{
     margin: 0;
