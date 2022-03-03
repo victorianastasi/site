@@ -7,18 +7,17 @@ let j = 0;
 function typing (text, id, acuText, x){
     if(x < text.length){
         acuText += text.charAt(x);
-        console.log(acuText)
         document.getElementById(`${id}`).innerHTML = acuText;
         setTimeout(() => {
-            typing(text, id, acuText, x)
+            typing(text, id, acuText, x);
         }, 100);
         x++;
     }
 }
-typing(nombre, 'nombre', acuNombre, i)
+typing(nombre, 'nombre', acuNombre, i);
 setTimeout(() => {
-    typing(apellido, 'apellido', acuApellido, j)
-}, 1100);
+    typing(apellido, 'apellido', acuApellido, j);
+}, 900);
 
 let projects = [
     {nombre: "Ayelen Industria Publicitaria S.A.", carouselId: "carouselAyn", img1: "./img/ayn1.jpg", img2: "./img/ayn2.jpg", img3: "./img/ayn3.jpg", descripcion: "Sitio Web de carteles publicitarios, responsive, utilizando SASS, Bootstrap y animaciones (Animate.css y Animate On Scroll Library).", github:"https://github.com/victorianastasi/proyectoAYN", online:"https://victorianastasi.github.io/proyectoAYN/", links: 2},

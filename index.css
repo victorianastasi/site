@@ -101,7 +101,7 @@ header:after{
 }
 .section-banner__title{
     font-family: 'Ubuntu Condensed', sans-serif;
-    line-height: 500px;
+    line-height: 550px;
     text-align: center;
     font-weight: 700;
     font-size: 2.5rem;
@@ -112,9 +112,7 @@ header:after{
     background-size: 500% 500%;
 	animation: gradient 10s ease-in-out infinite;
     text-transform: uppercase;
-    
     letter-spacing: 2px;
-    
 }
 .section-banner__title__word{
     margin: 0;
