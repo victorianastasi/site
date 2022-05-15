@@ -278,6 +278,17 @@ header:after{
 .skill-container:hover .bootstrap__icon{
     background-image: linear-gradient(to top, rgb(84, 58, 122),rgb(121,83,179));
 }
+.semantic__icon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.semantic__text, .semantic__icon{
+    background-color: rgb(52,189,178);
+}
+.skill-container:hover .semantic__icon{
+    background-image: linear-gradient(to top, rgb(39, 138, 130),rgb(52,189,178));
+}
 .wordpress__text, .wordpress__icon{
     background-color: rgb(45,113,150);
 }
@@ -295,6 +306,12 @@ header:after{
 }
 .skill-container:hover .react__icon{
     background-image: linear-gradient(to top, rgb(65, 139, 160),rgb(102,219,251));
+}
+.trello__text, .trello__icon{
+    background-color: rgb(0,144,228);
+}
+.skill-container:hover .trello__icon{
+    background-image: linear-gradient(to top, rgb(0, 98, 155),rgb(0,144,228));
 }
 
 /* PROJECTS  */
@@ -365,13 +382,18 @@ header:after{
 }
 .contact{
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    flex-flow: row wrap;
+    align-items: baseline;
     justify-content: space-evenly;
     margin-top: 3rem;
 }
 .contact__unit{
     margin: 2rem 0 1.75rem 0;
+    display: block;
+    width: 100%;
+}
+.contact__unit-email{
+    margin-bottom: 1rem;
 }
 .contact__box{
     position: relative;
@@ -465,6 +487,17 @@ footer{
     .card{
         margin: 1rem 1rem;
     }
+    .contact{
+        flex-flow: row wrap;
+        margin: 6rem auto;
+        width: 70%;
+    }
+    .contact__unit{
+        width: 33%;
+    }
+    .contact__unit-email{
+        margin-bottom: 1.75rem;
+    }
 }
 @media screen and (min-width: 992px){
     .navbar-nav{
@@ -497,6 +530,9 @@ footer{
     .card{
         margin: 1.5rem 2rem;
     }
+    .contact{
+        width: 50%;
+    }
 }
 @media screen and (min-width: 1200px){
     .navbar-nav{
@@ -515,6 +551,10 @@ footer{
         flex-flow: row;
         align-items: center;
         justify-content: center;
+    }
+    .contact{
+        margin-top: 10rem;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width: 1400px){
